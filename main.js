@@ -1,4 +1,4 @@
-document.getElementById("myCanvas");
+canvas=document.getElementById("myCanvas");
 ctx = canvas.getContext("2d"); 
 
 img_width = 300;
@@ -34,23 +34,21 @@ function my_keydown(e)
 	      }
 		  //write else if's here ⬇
 		  else if((keyPressed >=48 && keyPressed<=57)){
+			numberkey();
 			  document.getElementById("d1").innerHTML = "You pressed an number key.";
 		  console.log("number key");
 		  }
 
 		  else if((keyPressed >=37 && keyPressed<=40)){
+			arrowkey();
 			document.getElementById("d1").innerHTML = "You pressed an arrow key.";
 		console.log("arrow key");
 		  }
 		  
 		  else if((keyPressed == 17)|| (keyPressed==18)|| (keyPressed==27)){
+			specialkey();
 			document.getElementById("d1").innerHTML = "You pressed an special key.";
 		console.log("special key");
-		  }
-
-		  else if((keyPressed >=37 && keyPressed<=40)){
-			document.getElementById("d1").innerHTML = "You pressed an arrow key.";
-		console.log("arrow key");
 		  }
 		  
 		else {
